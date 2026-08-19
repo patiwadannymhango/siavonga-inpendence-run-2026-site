@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/USER/Documents/GitHub/copperbelt-marathon-site/src/api/**)",
+      "Read(//c/Users/USER/Documents/GitHub/copperbelt-marathon-site/src/pages/**)",
+      "Bash(cp -r docx_extract \"/c/Users/USER/AppData/Local/Temp/claude/c--Users-USER-Documents-GitHub-siavonga-inpendence-run-2026-site/1b0b92aa-e6b5-4f06-a8ea-2cfea4804012/scratchpad/docx_extract\")",
+      "Bash(rm -rf docx_extract)"
+    ]
+  }
+}
