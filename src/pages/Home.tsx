@@ -129,13 +129,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="destination-banner">
+      {/* <section className="destination-banner">
         <img src={siavongaScenery} alt="Lake Kariba shoreline at Siavonga, Zambia" loading="lazy" />
         <div className="destination-banner-caption">
           <span>Lake Kariba, Siavonga</span>
           <span className="destination-banner-credit">Photo: Mulengac / Wikimedia Commons, CC BY-SA 4.0</span>
         </div>
-      </section>
+      </section> */}
 
       <section className="section compact" id="races">
         <div className="section-inner">
@@ -178,7 +178,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section compact">
+      {/* <section className="section compact">
         <div className="section-inner">
           <Reveal as="div" className="merch-showcase">
             <img src={tshirtMockup} alt="Siavonga Independence Run 2026 official event t-shirt and finisher medal" loading="lazy" />
@@ -192,9 +192,9 @@ export default function Home() {
             </div>
           </Reveal>
         </div>
-      </section>
+      </section> */}
 
-      <section className="section compact alt">
+      {/* <section className="section compact alt">
         <div className="section-inner">
           <div className="reg-panel">
             <Reveal as="div" className="reg-panel-info">
@@ -213,7 +213,7 @@ export default function Home() {
             </Reveal>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="section compact" id="track">
         <div className="section-inner narrow">
