@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { EVENT, DISTANCES, WHY_SIAVONGA, PACKAGE_ITEMS, SPONSORS } from '../data/event';
+import { EVENT, DISTANCES, WHY_SIAVONGA, SPONSORS } from '../data/event';
 import { useCountdown } from '../hooks/useCountdown';
 import { useAppDispatch } from '../store/hooks';
 import { openRegistrationModal } from '../store/registrationSlice';
@@ -7,9 +7,9 @@ import { fetchRaceCategories } from '../api/registrationApi';
 import type { BackendCategory } from '../api/registrationApi';
 import Reveal from '../components/Reveal';
 import TrackRegistration from '../components/TrackRegistration';
-import tshirtMockup from '../assets/tshirt-mockup.jpg';
+// import tshirtMockup from '../assets/tshirt-mockup.jpg';
 import tshirtSide from '../assets/tshirt-side.jpg';
-import siavongaScenery from '../assets/siavonga-scenery.jpg';
+// import siavongaScenery from '../assets/siavonga-scenery.jpg';
 
 const logos = import.meta.glob('../assets/logos/*.{png,jpg}', { eager: true, import: 'default' }) as Record<string, string>;
 
