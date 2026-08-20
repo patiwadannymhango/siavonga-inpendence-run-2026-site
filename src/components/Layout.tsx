@@ -92,7 +92,7 @@ export default function Layout() {
             <span className="footer-label">Supported by</span>
             <div className="footer-logos">
               {SPONSORS.map((s) => (
-                <img key={s.name} src={logoSrc(s.file)} alt={s.name} title={s.name} />
+                <img key={s.name} className={s.logoClass ?? ''} src={logoSrc(s.file)} alt={s.name} title={s.name} />
               ))}
             </div>
           </div>

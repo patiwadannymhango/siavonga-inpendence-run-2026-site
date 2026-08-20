@@ -8,6 +8,8 @@ import type { BackendCategory } from '../api/registrationApi';
 import Reveal from '../components/Reveal';
 import TrackRegistration from '../components/TrackRegistration';
 import tshirtMockup from '../assets/tshirt-mockup.jpg';
+import tshirtSide from '../assets/tshirt-side.jpg';
+import siavongaScenery from '../assets/siavonga-scenery.jpg';
 
 const logos = import.meta.glob('../assets/logos/*.{png,jpg}', { eager: true, import: 'default' }) as Record<string, string>;
 
@@ -40,7 +42,15 @@ export default function Home() {
           <span className="footer-label">Official partners</span>
           <div className="trust-strip">
             {SPONSORS.map((s, i) => (
-              <Reveal as="img" key={s.name} delay={i * 80} src={logoSrc(s.file)} alt={s.name} title={s.name} />
+              <Reveal
+                as="img"
+                key={s.name}
+                delay={i * 80}
+                className={s.logoClass ?? ''}
+                src={logoSrc(s.file)}
+                alt={s.name}
+                title={s.name}
+              />
             ))}
           </div>
         </div>
@@ -48,6 +58,13 @@ export default function Home() {
 
       <section className="hero">
         <div className="hero-bg" aria-hidden="true" />
+
+        <div className="hero-side hero-side-left" aria-hidden="true">
+          <img src={tshirtSide} alt="" loading="lazy" />
+        </div>
+        <div className="hero-side hero-side-right" aria-hidden="true">
+          <img src={tshirtSide} alt="" loading="lazy" />
+        </div>
 
         <div className="hero-inner">
           <div className="eyebrow eyebrow-lg">{EVENT.date} · {EVENT.venue}</div>
@@ -109,6 +126,14 @@ export default function Home() {
               recreation and tourism.
             </p>
           </Reveal>
+        </div>
+      </section>
+
+      <section className="destination-banner">
+        <img src={siavongaScenery} alt="Lake Kariba shoreline at Siavonga, Zambia" loading="lazy" />
+        <div className="destination-banner-caption">
+          <span>Lake Kariba, Siavonga</span>
+          <span className="destination-banner-credit">Photo: Mulengac / Wikimedia Commons, CC BY-SA 4.0</span>
         </div>
       </section>
 

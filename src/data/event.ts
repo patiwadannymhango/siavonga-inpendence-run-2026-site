@@ -40,11 +40,11 @@ export const PACKAGE_ITEMS = [
   'Finisher certificate',
 ];
 
-export const SPONSORS = [
+export const SPONSORS: { name: string; file: string; tier: string; logoClass?: string }[] = [
   { name: 'FIT Sports Drink', file: 'fit.png', tier: 'Presenting sponsor' },
   { name: 'Vatra Mineral Water', file: 'vatra.png', tier: 'Hydration partner' },
   { name: 'Zambia Athletics', file: 'za.png', tier: 'Governing body' },
   { name: 'Kwendura Infinity Corporation', file: 'kwendura.jpg', tier: 'Official partner' },
-  { name: 'Enax Technology Limited', file: 'enax-logo.png', tier: 'Technology partner' },
+  { name: 'Enax Technology Limited', file: 'enax-logo.png', tier: 'Technology partner', logoClass: 'sponsor-logo-lg' },
   { name: 'Limitless Consultancy and Research Limited', file: 'limitless-logo.png', tier: 'Official partner' },
 ];

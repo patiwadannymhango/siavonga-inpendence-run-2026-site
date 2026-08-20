@@ -22,7 +22,7 @@ export default function Sponsors() {
           <div className="sponsor-grid">
             {SPONSORS.map((s, i) => (
               <Reveal as="div" key={s.name} delay={i * 100} className="sponsor-card">
-                <img src={logoSrc(s.file)} alt={s.name} />
+                <img className={s.logoClass ?? ''} src={logoSrc(s.file)} alt={s.name} />
                 <div className="sponsor-name">{s.name}</div>
                 <div className="sponsor-tier">{s.tier}</div>
               </Reveal>
