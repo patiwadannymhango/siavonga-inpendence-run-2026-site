@@ -114,7 +114,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section compact">
+      {/* <section className="section compact">
         <div className="section-inner narrow">
           <Reveal as="div">
             <div className="eyebrow">More than just a run</div>
@@ -127,7 +127,7 @@ export default function Home() {
             </p>
           </Reveal>
         </div>
-      </section>
+      </section> */}
 
       {/* <section className="destination-banner">
         <img src={siavongaScenery} alt="Lake Kariba shoreline at Siavonga, Zambia" loading="lazy" />

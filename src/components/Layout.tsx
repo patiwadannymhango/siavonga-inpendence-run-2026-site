@@ -1,16 +1,16 @@
 import { useEffect } from 'react';
 import { NavLink, Outlet, Link } from 'react-router-dom';
-import { EVENT, SPONSORS } from '../data/event';
+import { EVENT } from '../data/event';
 import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { openRegistrationModal } from '../store/registrationSlice';
 import RegistrationModal from './RegistrationModal';
 
-const logos = import.meta.glob('../assets/logos/*.{png,jpg}', { eager: true, import: 'default' }) as Record<string, string>;
+// const logos = import.meta.glob('../assets/logos/*.{png,jpg}', { eager: true, import: 'default' }) as Record<string, string>;
 
-function logoSrc(file: string): string {
-  const match = Object.entries(logos).find(([path]) => path.endsWith(file));
-  return match ? match[1] : '';
-}
+// function logoSrc(file: string): string {
+//   const match = Object.entries(logos).find(([path]) => path.endsWith(file));
+//   return match ? match[1] : '';
+// }
 
 export default function Layout() {
   const dispatch = useAppDispatch();
@@ -89,12 +89,12 @@ export default function Layout() {
             </div>
           </div>
           <div className="footer-sponsors">
-            <span className="footer-label">Supported by</span>
+            {/* <span className="footer-label">Supported by</span>
             <div className="footer-logos">
               {SPONSORS.map((s) => (
                 <img key={s.name} className={s.logoClass ?? ''} src={logoSrc(s.file)} alt={s.name} title={s.name} />
               ))}
-            </div>
+            </div> */}
           </div>
           <p className="footer-fine">
             © {new Date().getFullYear()} {EVENT.title}. All rights reserved.
