@@ -53,7 +53,9 @@ export async function fetchRaceFee(categoryValue: string): Promise<number | null
 
 export interface SubmitRegistrationResult {
   registrationId: string;
-  reference: string;
+  /** Not assigned yet — the backend only generates a reference once the
+   * registration is confirmed (i.e. after payment succeeds). */
+  reference: string | null;
   amount: number | null;
   currency: string;
 }
@@ -99,6 +101,10 @@ export async function initiatePayment(
 export interface PaymentStatusResult {
   status: string;
   registrationStatus: string;
+  /** Set only once the registration reaches CONFIRMED — this is where
+   * the frontend picks up the reference, since it doesn't exist yet at
+   * registration-creation time. */
+  reference: string | null;
 }
 
 /** Polled by the "check your phone" screen. */

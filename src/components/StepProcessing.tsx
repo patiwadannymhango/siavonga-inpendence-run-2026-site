@@ -43,7 +43,10 @@ export default function StepProcessing() {
         if (cancelled) return;
 
         if (result.status === 'SUCCESS') {
-          dispatch(submitRegistration({ reference: pending!.reference, status: 'confirmed' }));
+          // The reference is only assigned on confirmation, so it comes
+          // from this poll result, not the (still-null) value captured
+          // when the registration was first created.
+          dispatch(submitRegistration({ reference: result.reference, status: 'confirmed' }));
           return;
         }
         if (result.status === 'FAILED' || result.status === 'CANCELLED') {
@@ -107,9 +110,9 @@ export default function StepProcessing() {
         <div className="check-badge pending">⏳</div>
         <h2>Still waiting</h2>
         <p className="hint">
-          This is taking longer than expected. Your reference is{' '}
-          <strong>{pending.reference}</strong> — you can look it up anytime from{' '}
-          "Track my registration" once it goes through, or keep waiting here.
+          This is taking longer than expected. Once it goes through, you'll get a registration
+          reference — you can look it up anytime by email from "Track my registration", or keep
+          waiting here.
         </p>
         <div className="actions actions-stack">
           <button className="btn-primary btn-full" onClick={handleKeepWaiting}>

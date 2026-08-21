@@ -94,7 +94,7 @@ const registrationSlice = createSlice({
     clearPendingPayment(state) {
       state.pendingPayment = null;
     },
-    submitRegistration(state, action: PayloadAction<{ reference: string; status: RegistrationStatus }>) {
+    submitRegistration(state, action: PayloadAction<{ reference: string | null; status: RegistrationStatus }>) {
       const record: RegistrationRecord = {
         reference: action.payload.reference,
         details: state.details,

@@ -38,7 +38,9 @@ export interface PaymentInfo {
 }
 
 export interface RegistrationRecord {
-  reference: string;
+  /** Assigned by the backend only once the registration is confirmed —
+   * null while still pending payment. */
+  reference: string | null;
   details: RegistrationDetails;
   payment: PaymentInfo;
   status: RegistrationStatus;
@@ -56,7 +58,8 @@ export interface RegistrationRecord {
 export interface PendingPayment {
   paymentId: string;
   registrationId: string;
-  reference: string;
+  /** Not assigned yet at this point in the flow — see RegistrationRecord. */
+  reference: string | null;
   email: string;
   amount: number | null;
   currency: string;
