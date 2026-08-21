@@ -4,7 +4,7 @@ import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
 import Races from './pages/Races';
-import Sponsors from './pages/Sponsors';
+// import Sponsors from './pages/Sponsors';
 import SplashLoader from './components/SplashLoader';
 import './App.css';
 
@@ -27,7 +27,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/races" element={<Races />} />
-          <Route path="/sponsors" element={<Sponsors />} />
+          {/* <Route path="/sponsors" element={<Sponsors />} /> */}
         </Route>
       </Routes>
     </BrowserRouter>
