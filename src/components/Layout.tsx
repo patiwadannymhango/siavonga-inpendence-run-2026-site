@@ -42,6 +42,7 @@ export default function Layout() {
             <NavLink to="/about">About</NavLink>
             <NavLink to="/races">Races</NavLink>
             <NavLink to="/sponsors">Sponsors</NavLink>
+            <NavLink to="/vendors">Vendors</NavLink>
           </nav>
           <button type="button" className="btn-primary btn-sm" onClick={() => dispatch(openRegistrationModal())}>
             Register
@@ -71,6 +72,7 @@ export default function Layout() {
                 <span className="footer-label">Register</span>
                 <button type="button" onClick={() => dispatch(openRegistrationModal())}>Individual entry</button>
                 <a href="/#track">Track registration</a>
+                <Link to="/vendors">Vendor registration</Link>
               </div>
               <div>
                 <span className="footer-label">About</span>
