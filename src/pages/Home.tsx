@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { EVENT, DISTANCES, WHY_SIAVONGA, SPONSORS } from '../data/event';
 import { useCountdown } from '../hooks/useCountdown';
 import { useAppDispatch } from '../store/hooks';
@@ -97,9 +98,26 @@ export default function Home() {
 
           <div className="hero-cta">
             <button type="button" className="btn-primary" onClick={() => dispatch(openRegistrationModal())}>
-              Register now
+              Runner Register now
             </button>
             <a href="#races" className="btn-ghost">See race categories</a>
+            <Link
+              to="/vendors"
+              className="btn-vendor"
+              style={{
+                display: 'inline-block',
+                padding: '11px 20px',
+                borderRadius: '6px',
+                fontSize: '14px',
+                fontWeight: 600,
+                textDecoration: 'none',
+                background: 'var(--gold)',
+                color: 'var(--on-light)',
+                border: '1px solid var(--gold)',
+              }}
+            >
+              Vendor Registration
+            </Link>
           </div>
 
           <div className="countdown">
